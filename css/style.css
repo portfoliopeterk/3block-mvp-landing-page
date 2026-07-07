@@ -108,7 +108,8 @@ a {
 }
 
 .wordmark-logo img {
-  width: clamp(15rem, 42vw, 24rem);
+  width: clamp(18rem, 70vw, 36rem);
+  max-width: 100%;
   height: auto;
 }
 

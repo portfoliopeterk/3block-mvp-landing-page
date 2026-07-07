@@ -1,5 +1,22 @@
 # Change Log
 
+## 2026-07-07 - Landing logo swapped to logo.svg
+
+**What Changed:**
+- Landing page heading now uses `logo.svg` (wide single-line wordmark, 898×173) instead of `logo.avif` (stacked); image sizing widened to suit the new proportions (`clamp(18rem, 70vw, 36rem)`)
+- `logo.avif` kept in the repo but no longer referenced
+
+**Why:**
+- User provided a new SVG version of the logo
+
+**Files Modified:**
+- `index.html` - img src/dimensions
+- `css/style.css` - logo width clamp
+- `logo.svg` - new (added by user)
+- `docs/readme.md` - file inventory updated
+
+---
+
 ## 2026-07-06 - Published to GitHub Pages
 
 **What Changed:**

@@ -12,7 +12,7 @@ folder to Netlify/Vercel/GitHub Pages or any static host.
 | File | Purpose |
 | --- | --- |
 | `index.html` | Landing page (Tiny Dinner-inspired: gradient, logo, about, one CTA) |
-| `logo.avif` | Hand-drawn "3 BLOCK" wordmark (white on transparent), used as the landing heading |
+| `logo.svg` | "3 BLOCK" wordmark (white, single line), used as the landing heading (`logo.avif` is the older stacked version, kept but unused) |
 | `favicon.svg` | Green square favicon with a cream "3", linked from both pages |
 | `apply.html` | Grant description, requirements, and application form |
 | `css/style.css` | All styles; design tokens as CSS custom properties in `:root` |
@@ -26,7 +26,7 @@ folder to Netlify/Vercel/GitHub Pages or any static host.
   ink `#0a2416` for text on light chips/buttons.
 - **Type:** Fraunces (900, soft optical axis) for wordmark/headings; Catamaran
   for body/UI. Loaded from Google Fonts.
-- **Signature:** the hand-drawn `logo.avif` wordmark on the landing page.
+- **Signature:** the `logo.svg` wordmark on the landing page.
   (An earlier three-square "block motif" was removed by request.)
 - Square corners everywhere; CTAs are underlined text links (per the
   tiny-dinner.com inspiration). Group/service examples are written as plain
