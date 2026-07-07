@@ -1,5 +1,24 @@
 # Change Log
 
+## 2026-07-07 - Apply page content rewrite + real contact email
+
+**What Changed:**
+- Replaced everything above the form on the apply page with new copy: platform intro as the hero ("3Block is a community platform…"), a "What's a 3Block group?" section (built on something real / meet regularly / give back, plus organizer support and microgrant notes), and a closing section on why neighborhood ties matter and the Brooklyn launch
+- Old hero ("Starter Grants", 10 grants · up to $250), "The idea", "What we fund", "What we ask", and "How it works" sections removed; unused CSS (hero-title, hero-meta, steps-list) cleaned up
+- Swapped the placeholder `hello@3block.org` for the real contact `peter@portfolio.sc` on both pages (footer, failure message, landing corner link)
+- Updated the apply page title ("Apply — 3Block") and meta description to match the new positioning
+
+**Why:**
+- User provided final page copy and a real contact address
+
+**Files Modified:**
+- `apply.html` - content sections replaced, title/meta updated, email swapped
+- `index.html` - email swapped
+- `css/style.css` - hero restyle (lede in Fraunces light), stale styles removed, section link styling
+- `docs/readme.md` - content facts updated
+
+---
+
 ## 2026-07-07 - Form rework: all fields at once, new questions
 
 **What Changed:**

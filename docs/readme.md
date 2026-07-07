@@ -79,5 +79,7 @@ headers are created.
   awarded (no deadline shown).
 - Requirements: ongoing interest group, meets at least monthly, community
   service activity every quarter (4×/year).
-- Contact address used throughout: `hello@3block.org` (placeholder — update if
-  the real address differs).
+- Contact address used throughout: `peter@portfolio.sc`.
+- Positioning (2026-07-07): 3Block is a community platform for hyperlocal
+  neighborhood groups; launching in Brooklyn, picking up to 10 organizers;
+  microgrants of $50–250 (more available for groups that stay active).

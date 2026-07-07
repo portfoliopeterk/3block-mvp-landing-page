@@ -198,29 +198,15 @@ a {
 }
 
 .hero {
-  padding: 3rem 0 4.5rem;
-}
-
-.hero-title {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(3rem, 9vw, 5.5rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
-}
-
-.hero-meta {
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--sun);
-  margin-bottom: 1.5rem;
+  padding: 2.5rem 0 3rem;
 }
 
 .hero-lede {
-  font-size: 1.2rem;
-  max-width: 34rem;
-  margin-bottom: 2rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  line-height: 1.45;
+  max-width: 38rem;
 }
 
 .section {
@@ -250,6 +236,11 @@ a {
   display: grid;
   gap: 1.1rem;
   max-width: 36rem;
+  padding: 0;
+}
+
+.req-list + .req-list {
+  margin-top: 1.1rem;
 }
 
 .req-list li {
@@ -271,15 +262,13 @@ a {
   color: var(--sun);
 }
 
-.steps-list {
-  max-width: 36rem;
-  padding-left: 1.4rem;
-  display: grid;
-  gap: 0.5rem;
+.section a {
+  font-weight: 700;
+  text-decoration-color: var(--sun);
+  text-underline-offset: 0.25em;
 }
 
-.steps-list li::marker {
-  font-weight: 700;
+.section a:hover {
   color: var(--sun);
 }
 
