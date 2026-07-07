@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter Grants — 3 Block</title>
+  <meta name="description" content="3 Block is awarding 10 starter grants of up to $250 to Brooklyn neighbors who want to start an ongoing community group. Read the requirements and apply.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,900,100&family=Catamaran:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="apply-page">
+
+  <header class="apply-header">
+    <a class="home-link" href="index.html">
+      <span class="home-wordmark">3&nbsp;Block</span>
+    </a>
+    <a class="header-cta" href="#apply">Apply</a>
+  </header>
+
+  <main class="apply-main">
+
+    <section class="hero">
+      <h1 class="hero-title">Starter Grants</h1>
+      <p class="hero-meta">10 grants&ensp;&middot;&ensp;up to $250&ensp;&middot;&ensp;Brooklyn</p>
+      <p class="hero-lede">
+        Got an idea for a group your neighbors would love? We'll help you get it
+        off the ground — flyers, snacks, supplies, whatever your first few
+        meetups need.
+      </p>
+      <a class="cta-link" href="#apply">Start your application</a>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">The idea</h2>
+      <p>
+        3 Block helps neighbors with shared interests form resilient community
+        groups. We back aspiring organizers with tools, resources, and a little
+        seed money to strengthen the bonds between the people who live around
+        them.
+      </p>
+      <p>
+        We believe the best groups are hyperlocal — close enough to walk to —
+        and meet regularly, building deep connections between neighbors and
+        offering meaningful service to the community around them.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What we fund</h2>
+      <p>
+        Any interest you can imagine, as long as neighbors gather around it —
+        a book club, a run club, a knitting circle, a repair club, coffee on
+        the stoop. If it brings the same people together again and again,
+        it counts.
+      </p>
+      <p>
+        Every group also gives back to its neighborhood with a community
+        service activity each quarter — think a book drive, a block cleanup,
+        a blood donation day, or a food drive.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What we ask</h2>
+      <ul class="req-list">
+        <li>
+          <strong>Be Brooklyn-based.</strong> Your group gathers in a Brooklyn
+          neighborhood — ideally within a few blocks of where you live.
+        </li>
+        <li>
+          <strong>Start an ongoing group.</strong> Not a one-off event — a
+          group around a shared interest that keeps meeting.
+        </li>
+        <li>
+          <strong>Meet at least monthly.</strong> A regular cadence is what
+          turns strangers into neighbors.
+        </li>
+        <li>
+          <strong>Serve the community every quarter.</strong> Four times a
+          year, do something for the neighborhood — a book drive, a block
+          cleanup, a blood donation day, a food drive.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">How it works</h2>
+      <ol class="steps-list">
+        <li>Tell us about your group idea below.</li>
+        <li>We review applications on a rolling basis, until all 10 grants are awarded.</li>
+        <li>If selected, you get up to $250 to cover your starting costs.</li>
+        <li>You start your group — and we're with you along the way.</li>
+      </ol>
+    </section>
+
+    <section class="section apply-form" id="apply" aria-label="Grant application form">
+      <h2 class="section-title">Apply</h2>
+
+      <div class="form-stage">
+      <form id="grant-form" class="form-viewport" novalidate>
+
+        <section class="step is-active" data-step="intro">
+          <div class="step-inner">
+            <h2 class="step-title">Apply for a starter grant</h2>
+            <p class="step-help">Six quick questions. Takes about three minutes.</p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="start">Start application <span aria-hidden="true">&rarr;</span></button>
+              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-field="name">
+          <div class="step-inner">
+            <label class="step-label" for="f-name">
+              <span class="q-num" aria-hidden="true">1</span>
+              What's your name?
+            </label>
+            <input class="step-input" id="f-name" name="name" type="text"
+                   autocomplete="name" placeholder="Type your answer here…"
+                   data-required data-error-empty="We'd love to know who you are.">
+            <p class="step-error" aria-live="polite"></p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
+              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-field="email">
+          <div class="step-inner">
+            <label class="step-label" for="f-email">
+              <span class="q-num" aria-hidden="true">2</span>
+              What's your email?
+            </label>
+            <p class="step-help">This is how we'll get back to you.</p>
+            <input class="step-input" id="f-email" name="email" type="email"
+                   autocomplete="email" placeholder="name@example.com"
+                   data-required data-type="email"
+                   data-error-empty="We need an email to reach you."
+                   data-error-invalid="Hmm, that email doesn't look right.">
+            <p class="step-error" aria-live="polite"></p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
+              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-field="phone">
+          <div class="step-inner">
+            <label class="step-label" for="f-phone">
+              <span class="q-num" aria-hidden="true">3</span>
+              And your phone number?
+            </label>
+            <p class="step-help">Optional — skip it if email is enough.</p>
+            <input class="step-input" id="f-phone" name="phone" type="tel"
+                   autocomplete="tel" placeholder="(718) 555-0123"
+                   data-type="phone"
+                   data-error-invalid="That doesn't look like a phone number.">
+            <p class="step-error" aria-live="polite"></p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
+              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-field="location">
+          <div class="step-inner">
+            <label class="step-label" for="f-location">
+              <span class="q-num" aria-hidden="true">4</span>
+              Which Brooklyn neighborhood are you in?
+            </label>
+            <p class="step-help">Bed-Stuy, Sunset Park, Flatbush — wherever your blocks are.</p>
+            <input class="step-input" id="f-location" name="location" type="text"
+                   placeholder="Your neighborhood"
+                   data-required data-error-empty="Tell us where your group would gather.">
+            <p class="step-error" aria-live="polite"></p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
+              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-field="description">
+          <div class="step-inner">
+            <label class="step-label" for="f-description">
+              <span class="q-num" aria-hidden="true">5</span>
+              Describe the group you want to start.
+            </label>
+            <p class="step-help">What's the shared interest? How often would you meet? What community activity could you see the group doing each quarter?</p>
+            <textarea class="step-input step-textarea" id="f-description" name="description"
+                      rows="4" placeholder="Type your answer here…"
+                      data-required data-error-empty="This is the part we're most excited to read."></textarea>
+            <p class="step-error" aria-live="polite"></p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
+              <span class="key-hint"><strong>&#8984;/Ctrl + Enter</strong> to continue</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-field="amount">
+          <div class="step-inner">
+            <label class="step-label" for="f-amount">
+              <span class="q-num" aria-hidden="true">6</span>
+              How much do you need to get started?
+            </label>
+            <p class="step-help">Up to $250 — flyers, supplies, snacks, a folding table.</p>
+            <div class="amount-wrap">
+              <span class="amount-prefix" aria-hidden="true">$</span>
+              <input class="step-input amount-input" id="f-amount" name="amount" type="number"
+                     min="1" max="250" step="1" inputmode="numeric" placeholder="250"
+                     data-required data-type="amount"
+                     data-error-empty="Give us a number — a rough one is fine."
+                     data-error-invalid="Grants go up to $250 — pick a number between 1 and 250.">
+            </div>
+            <p class="step-error" aria-live="polite"></p>
+            <div class="step-actions">
+              <button type="submit" class="btn-primary" data-action="submit">Send application</button>
+              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="step" data-step="success">
+          <div class="step-inner step-center">
+            <h2 class="step-title">We got it.</h2>
+            <p class="step-help">
+              We review applications on a rolling basis and will be in touch.
+              In the meantime — start thinking about your first meetup.
+            </p>
+          </div>
+        </section>
+
+        <section class="step" data-step="failure">
+          <div class="step-inner step-center">
+            <h2 class="step-title">That didn't go through.</h2>
+            <p class="step-help">
+              Something on our end hiccuped. Please try again in a minute — or
+              email your answers to
+              <a href="mailto:hello@3block.org">hello@3block.org</a> and we'll
+              take it from there.
+            </p>
+            <div class="step-actions">
+              <button type="button" class="btn-primary" data-action="retry">Try again</button>
+            </div>
+          </div>
+        </section>
+
+      </form>
+
+      <div class="form-dots" id="form-dots" aria-hidden="true"></div>
+      <p class="sr-only" id="form-sr-counter" aria-live="polite"></p>
+
+      <div class="form-nav" id="form-nav">
+        <button type="button" class="nav-btn" data-action="prev" aria-label="Previous question">&uarr;</button>
+        <button type="button" class="nav-btn" data-action="fwd" aria-label="Next question">&darr;</button>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="apply-footer">
+    <span class="footer-wordmark">3&nbsp;Block</span>
+    <a href="mailto:hello@3block.org">hello@3block.org</a>
+  </footer>
+
+  <script src="js/apply.js"></script>
+</body>
+</html>
