@@ -1,5 +1,20 @@
 # Change Log
 
+## 2026-07-07 - Logo spacing + new favicon artwork
+
+**What Changed:**
+- Added vertical breathing room around the landing logo (1.75rem above and below)
+- `favicon.svg` replaced with the real "3" glyph artwork (updated by user)
+
+**Why:**
+- User feedback: logo felt too tight against the tagline and about text
+
+**Files Modified:**
+- `css/style.css` - `.wordmark-logo` margin
+- `favicon.svg` - new artwork
+
+---
+
 ## 2026-07-07 - Landing logo swapped to logo.svg
 
 **What Changed:**
