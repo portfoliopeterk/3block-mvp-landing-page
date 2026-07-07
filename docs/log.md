@@ -1,5 +1,19 @@
 # Change Log
 
+## 2026-07-07 - Apply page header uses logo.svg
+
+**What Changed:**
+- The top-left "3 Block" text wordmark in the apply page header was replaced with `logo.svg` (8.5rem wide, links home)
+
+**Why:**
+- Use the real logo artwork consistently across pages
+
+**Files Modified:**
+- `apply.html` - header img
+- `css/style.css` - `.home-logo` style, `.home-wordmark` removed
+
+---
+
 ## 2026-07-07 - Apply page content rewrite + real contact email
 
 **What Changed:**

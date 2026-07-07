@@ -169,7 +169,12 @@ a {
   text-decoration: none;
 }
 
-.home-wordmark,
+.home-logo {
+  display: block;
+  width: 8.5rem;
+  height: auto;
+}
+
 .footer-wordmark {
   font-family: var(--font-display);
   font-weight: 900;
