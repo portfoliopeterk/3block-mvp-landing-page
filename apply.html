@@ -98,170 +98,135 @@
 
     <section class="section apply-form" id="apply" aria-label="Grant application form">
       <h2 class="section-title">Apply</h2>
+      <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
 
-      <div class="form-stage">
-      <form id="grant-form" class="form-viewport" novalidate>
+      <form id="grant-form" class="stacked-form" novalidate>
 
-        <section class="step is-active" data-step="intro">
-          <div class="step-inner">
-            <h2 class="step-title">Apply for a starter grant</h2>
-            <p class="step-help">Six quick questions. Takes about three minutes.</p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="start">Start application <span aria-hidden="true">&rarr;</span></button>
-              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
-            </div>
-          </div>
-        </section>
+        <div class="field">
+          <label class="field-label" for="f-name">Your name<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-name" name="name" type="text"
+                 autocomplete="name"
+                 data-required data-error-empty="We'd love to know who you are.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
 
-        <section class="step" data-field="name">
-          <div class="step-inner">
-            <label class="step-label" for="f-name">
-              <span class="q-num" aria-hidden="true">1</span>
-              What's your name?
+        <div class="field">
+          <label class="field-label" for="f-email">Email<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-email" name="email" type="email"
+                 autocomplete="email"
+                 data-required data-type="email"
+                 data-error-empty="We need an email to reach you."
+                 data-error-invalid="Hmm, that email doesn't look right.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-neighborhood">What neighborhood are you in?<span class="req" aria-hidden="true">*</span></label>
+          <p class="field-help">Rough cross streets are great too.</p>
+          <input class="field-input" id="f-neighborhood" name="neighborhood" type="text"
+                 data-required data-error-empty="Tell us where your blocks are.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-group">What kind of group do you run or want to start?<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-group" name="group" type="text"
+                 data-required data-error-empty="This is the part we're most excited to read.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field field-choice" data-choice="status"
+                  data-required data-error-empty="Pick whichever fits.">
+          <legend class="field-label">Are you already running it, or looking to start one?<span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row">
+            <label class="choice">
+              <input type="radio" name="status" value="Already running it">
+              <span>Already running it</span>
             </label>
-            <input class="step-input" id="f-name" name="name" type="text"
-                   autocomplete="name" placeholder="Type your answer here…"
-                   data-required data-error-empty="We'd love to know who you are.">
-            <p class="step-error" aria-live="polite"></p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
-              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
-            </div>
-          </div>
-        </section>
-
-        <section class="step" data-field="email">
-          <div class="step-inner">
-            <label class="step-label" for="f-email">
-              <span class="q-num" aria-hidden="true">2</span>
-              What's your email?
+            <label class="choice">
+              <input type="radio" name="status" value="Want to start one">
+              <span>Want to start one</span>
             </label>
-            <p class="step-help">This is how we'll get back to you.</p>
-            <input class="step-input" id="f-email" name="email" type="email"
-                   autocomplete="email" placeholder="name@example.com"
-                   data-required data-type="email"
-                   data-error-empty="We need an email to reach you."
-                   data-error-invalid="Hmm, that email doesn't look right.">
-            <p class="step-error" aria-live="polite"></p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
-              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
-            </div>
           </div>
-        </section>
+          <p class="field-error" aria-live="polite"></p>
+        </fieldset>
 
-        <section class="step" data-field="phone">
-          <div class="step-inner">
-            <label class="step-label" for="f-phone">
-              <span class="q-num" aria-hidden="true">3</span>
-              And your phone number?
+        <fieldset class="field field-choice" data-choice="coorganizer"
+                  data-required data-error-empty="Pick one — 'Not yet' is a fine answer.">
+          <legend class="field-label">Do you have a friend or colleague you could bring in as a co-organizer?<span class="req" aria-hidden="true">*</span></legend>
+          <p class="field-help">Not required, but it often helps a group succeed faster.</p>
+          <div class="choice-row">
+            <label class="choice">
+              <input type="radio" name="coorganizer" value="Yes">
+              <span>Yes</span>
             </label>
-            <p class="step-help">Optional — skip it if email is enough.</p>
-            <input class="step-input" id="f-phone" name="phone" type="tel"
-                   autocomplete="tel" placeholder="(718) 555-0123"
-                   data-type="phone"
-                   data-error-invalid="That doesn't look like a phone number.">
-            <p class="step-error" aria-live="polite"></p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
-              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
-            </div>
-          </div>
-        </section>
-
-        <section class="step" data-field="location">
-          <div class="step-inner">
-            <label class="step-label" for="f-location">
-              <span class="q-num" aria-hidden="true">4</span>
-              Which Brooklyn neighborhood are you in?
+            <label class="choice">
+              <input type="radio" name="coorganizer" value="Not yet">
+              <span>Not yet</span>
             </label>
-            <p class="step-help">Bed-Stuy, Sunset Park, Flatbush — wherever your blocks are.</p>
-            <input class="step-input" id="f-location" name="location" type="text"
-                   placeholder="Your neighborhood"
-                   data-required data-error-empty="Tell us where your group would gather.">
-            <p class="step-error" aria-live="polite"></p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
-              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
-            </div>
           </div>
-        </section>
+          <p class="field-error" aria-live="polite"></p>
+        </fieldset>
 
-        <section class="step" data-field="description">
-          <div class="step-inner">
-            <label class="step-label" for="f-description">
-              <span class="q-num" aria-hidden="true">5</span>
-              Describe the group you want to start.
-            </label>
-            <p class="step-help">What's the shared interest? How often would you meet? What community activity could you see the group doing each quarter?</p>
-            <textarea class="step-input step-textarea" id="f-description" name="description"
-                      rows="4" placeholder="Type your answer here…"
-                      data-required data-error-empty="This is the part we're most excited to read."></textarea>
-            <p class="step-error" aria-live="polite"></p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="next">OK <span aria-hidden="true">&rarr;</span></button>
-              <span class="key-hint"><strong>&#8984;/Ctrl + Enter</strong> to continue</span>
-            </div>
-          </div>
-        </section>
+        <div class="field">
+          <label class="field-label" for="f-cadence">How often would you plan to meet?<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-cadence" name="cadence" type="text"
+                 data-required data-error-empty="A rough cadence is fine — weekly, monthly…">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
 
-        <section class="step" data-field="amount">
-          <div class="step-inner">
-            <label class="step-label" for="f-amount">
-              <span class="q-num" aria-hidden="true">6</span>
-              How much do you need to get started?
-            </label>
-            <p class="step-help">Up to $250 — flyers, supplies, snacks, a folding table.</p>
-            <div class="amount-wrap">
-              <span class="amount-prefix" aria-hidden="true">$</span>
-              <input class="step-input amount-input" id="f-amount" name="amount" type="number"
-                     min="1" max="250" step="1" inputmode="numeric" placeholder="250"
-                     data-required data-type="amount"
-                     data-error-empty="Give us a number — a rough one is fine."
-                     data-error-invalid="Grants go up to $250 — pick a number between 1 and 250.">
-            </div>
-            <p class="step-error" aria-live="polite"></p>
-            <div class="step-actions">
-              <button type="submit" class="btn-primary" data-action="submit">Send application</button>
-              <span class="key-hint">press <strong>Enter&nbsp;&#8629;</strong></span>
-            </div>
-          </div>
-        </section>
+        <div class="field">
+          <label class="field-label" for="f-service">Any ideas for community service activities?</label>
+          <p class="field-help">We can help you with this later if not.</p>
+          <textarea class="field-input field-textarea" id="f-service" name="service" rows="3"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
 
-        <section class="step" data-step="success">
-          <div class="step-inner step-center">
-            <h2 class="step-title">We got it.</h2>
-            <p class="step-help">
-              We review applications on a rolling basis and will be in touch.
-              In the meantime — start thinking about your first meetup.
-            </p>
-          </div>
-        </section>
+        <div class="field">
+          <label class="field-label" for="f-first-gathering">When could you picture holding a first gathering?<span class="req" aria-hidden="true">*</span></label>
+          <p class="field-help">A rough sense is fine.</p>
+          <input class="field-input" id="f-first-gathering" name="first_gathering" type="text"
+                 data-required data-error-empty="A rough sense is all we need — next month, this fall…">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
 
-        <section class="step" data-step="failure">
-          <div class="step-inner step-center">
-            <h2 class="step-title">That didn't go through.</h2>
-            <p class="step-help">
-              Something on our end hiccuped. Please try again in a minute — or
-              email your answers to
-              <a href="mailto:hello@3block.org">hello@3block.org</a> and we'll
-              take it from there.
-            </p>
-            <div class="step-actions">
-              <button type="button" class="btn-primary" data-action="retry">Try again</button>
-            </div>
-          </div>
-        </section>
+        <div class="field">
+          <label class="field-label" for="f-microgrant">Are you interested in a $50&ndash;250 microgrant?</label>
+          <p class="field-help">If so, how much, and what would you spend it on?</p>
+          <textarea class="field-input field-textarea" id="f-microgrant" name="microgrant" rows="3"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-notes">Anything else you'd like to share?</label>
+          <textarea class="field-input field-textarea" id="f-notes" name="notes" rows="3"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" data-action="submit">Send application</button>
+          <p class="form-error" id="form-error" aria-live="polite"></p>
+        </div>
 
       </form>
 
-      <div class="form-dots" id="form-dots" aria-hidden="true"></div>
-      <p class="sr-only" id="form-sr-counter" aria-live="polite"></p>
-
-      <div class="form-nav" id="form-nav">
-        <button type="button" class="nav-btn" data-action="prev" aria-label="Previous question">&uarr;</button>
-        <button type="button" class="nav-btn" data-action="fwd" aria-label="Next question">&darr;</button>
+      <div class="form-result" id="form-success" hidden>
+        <h3 class="result-title">We got it.</h3>
+        <p>
+          We review applications on a rolling basis and will be in touch.
+          In the meantime — start thinking about your first gathering.
+        </p>
       </div>
+
+      <div class="form-result" id="form-failure" hidden>
+        <h3 class="result-title">That didn't go through.</h3>
+        <p>
+          Something on our end hiccuped. Please try again in a minute — or
+          email your answers to
+          <a href="mailto:hello@3block.org">hello@3block.org</a> and we'll
+          take it from there.
+        </p>
+        <button type="button" class="btn-primary" id="retry-btn">Try again</button>
       </div>
     </section>
 

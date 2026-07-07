@@ -13,10 +13,15 @@ var HEADERS = [
   "Timestamp",
   "Name",
   "Email",
-  "Phone",
   "Neighborhood",
-  "Group description",
-  "Grant amount ($)"
+  "Kind of group",
+  "Running or starting?",
+  "Co-organizer?",
+  "Meeting cadence",
+  "Community service ideas",
+  "First gathering",
+  "Microgrant interest",
+  "Anything else"
 ];
 
 function doPost(e) {
@@ -28,10 +33,15 @@ function doPost(e) {
       new Date(),
       p.name || "",
       p.email || "",
-      p.phone || "",
-      p.location || "",
-      p.description || "",
-      p.amount || ""
+      p.neighborhood || "",
+      p.group || "",
+      p.status || "",
+      p.coorganizer || "",
+      p.cadence || "",
+      p.service || "",
+      p.first_gathering || "",
+      p.microgrant || "",
+      p.notes || ""
     ]);
 
     return jsonResponse_({ ok: true });

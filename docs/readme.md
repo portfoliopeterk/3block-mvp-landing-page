@@ -34,20 +34,18 @@ folder to Netlify/Vercel/GitHub Pages or any static host.
 
 ## Application form
 
-One question per screen, vanilla JS (`js/apply.js`):
+All questions shown at once (standard stacked form), vanilla JS (`js/apply.js`):
 
-- Enter advances (⌘/Ctrl+Enter in the textarea); ↑/↓ buttons navigate back and
-  forward; invalid answers shake with an inline error and block advancing.
-- Progress shown as small square dots bottom-left (yellow = answered, cream =
-  current); a hidden live region announces "Question n of 6" to screen readers.
-- The form floats directly on the page under an "Apply" section heading — no
-  bordered box.
-- Fields: name, email, phone (optional), Brooklyn neighborhood, group
-  description, grant amount ($1–$250). No separate review screen — the last
-  question carries the "Send application" submit button.
-- `prefers-reduced-motion` collapses all animation.
+- Validates on submit; invalid fields get an inline error, the page scrolls to
+  the first one, and errors clear as you edit. Radio questions ("running or
+  starting", "co-organizer") render as selectable pill buttons.
+- Fields (name attribute → sheet column): `name`*, `email`*, `neighborhood`*,
+  `group`* (kind of group), `status`* (radio: Already running it / Want to
+  start one), `coorganizer`* (radio: Yes / Not yet), `cadence`* (how often),
+  `service` (community service ideas), `first_gathering`*, `microgrant`
+  ($50–250 interest, free text), `notes` (anything else). * = required.
 - **Placeholder mode:** until a real Apps Script URL is set, submitting shows
-  the success screen locally and logs a console warning — nothing is sent.
+  the success message locally and logs a console warning — nothing is sent.
 
 ## Google Sheet backend — setup (~5 minutes)
 
@@ -67,6 +65,13 @@ One question per screen, vanilla JS (`js/apply.js`):
 
 To change what's stored, edit `HEADERS` and the `appendRow` call in `Code.gs`,
 then **Deploy → Manage deployments → Edit → New version**.
+
+**Note (2026-07-07):** the form questions changed (phone and numeric amount
+removed; neighborhood, kind of group, running/starting, co-organizer, cadence,
+service ideas, first gathering, microgrant, notes added). If you deployed the
+script before this date, paste the updated `Code.gs` and redeploy a new
+version; delete the old "Applications" sheet tab (or rename it) so the new
+headers are created.
 
 ## Content facts (for future edits)
 

@@ -1,5 +1,26 @@
 # Change Log
 
+## 2026-07-07 - Form rework: all fields at once, new questions
+
+**What Changed:**
+- Replaced the Typeform-style one-question-per-screen form with a standard stacked form showing all fields at once; the step engine, progress dots, and navigation arrows were removed
+- New question set: name*, email*, neighborhood (cross streets ok)*, kind of group*, already running vs. want to start* (radio), co-organizer* (radio: Yes / Not yet), meeting cadence*, community service ideas, first gathering timing*, microgrant interest ($50–250, free text), anything else
+- Old questions removed (phone, Brooklyn-specific location wording, group description, numeric grant amount)
+- Radios styled as selectable pill buttons; validation runs on submit with inline errors and scroll-to-first-invalid; success/failure messages replace the form after submission
+- Google Apps Script updated to the new columns (requires redeploying the script and a fresh "Applications" tab for anyone who deployed the old version)
+
+**Why:**
+- User feedback: single-page form is simpler, and the questions were refined to better screen organizers
+
+**Files Modified:**
+- `apply.html` - form section rewritten
+- `js/apply.js` - rewritten (validation + submission, no step engine)
+- `css/style.css` - step-engine styles removed, stacked form + choice styles added
+- `apps-script/Code.gs` - new field names and sheet headers
+- `docs/readme.md` - form and backend docs updated
+
+---
+
 ## 2026-07-07 - Logo spacing + new favicon artwork
 
 **What Changed:**
