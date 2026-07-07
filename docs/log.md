@@ -1,5 +1,21 @@
 # Change Log
 
+## 2026-07-06 - Published to GitHub Pages
+
+**What Changed:**
+- Fixed a typo in the landing about text ("metups" → "meetups")
+- Initialized git, pushed to https://github.com/smombartz/3block-mvp-landing-page, and enabled GitHub Pages from the main branch root
+- Live site: https://smombartz.github.io/3block-mvp-landing-page/
+
+**Why:**
+- Publish the MVP so it can be shared
+
+**Files Modified:**
+- `index.html` - typo fix
+- `.gitignore` - new (ignores .DS_Store)
+
+---
+
 ## 2026-07-06 - Community service copy, yellow bullets, optional phone, submit on last question
 
 **What Changed:**
