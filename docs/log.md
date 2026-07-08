@@ -1,5 +1,20 @@
 # Change Log
 
+## 2026-07-07 - Gradient colors updated
+
+**What Changed:**
+- Background gradient now blends #509B10 (fresh) into #2C5E00 (deep) — replacing the old three-stop #43ac5c/#0b7a3a/#086030 gradient on both pages
+- `og-image.png` regenerated to match
+
+**Why:**
+- User provided the final brand greens
+
+**Files Modified:**
+- `css/style.css` - `--green-fresh`/`--green-deep` values, gradient stops
+- `og-image.png` - regenerated
+
+---
+
 ## 2026-07-07 - OG/share image + social meta tags
 
 **What Changed:**

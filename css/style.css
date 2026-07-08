@@ -5,9 +5,8 @@
    ============================================================ */
 
 :root {
-  --green-fresh: #43ac5c;
-  --green-deep: #0b7a3a;
-  --green-shade: #086030;
+  --green-fresh: #509b10;
+  --green-deep: #2c5e00;
   --cream: #f7f3e7;
   --ink: #0a2416;
   --sun: #ffd500;
@@ -36,8 +35,7 @@ body {
   background-image: radial-gradient(
     130% 130% at 50% -10%,
     var(--green-fresh) 0%,
-    var(--green-deep) 62%,
-    var(--green-shade) 100%
+    var(--green-deep) 100%
   );
   background-attachment: fixed;
   min-height: 100vh;
