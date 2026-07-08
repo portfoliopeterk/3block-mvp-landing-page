@@ -1,16 +1,16 @@
 # Change Log
 
-## 2026-07-07 - Apply page header uses logo.svg
+## 2026-07-07 - Apply page header and footer use logo.svg
 
 **What Changed:**
-- The top-left "3 Block" text wordmark in the apply page header was replaced with `logo.svg` (8.5rem wide, links home)
+- The "3 Block" text wordmarks in the apply page header (top left, links home) and footer were replaced with `logo.svg` (8.5rem wide)
 
 **Why:**
 - Use the real logo artwork consistently across pages
 
 **Files Modified:**
-- `apply.html` - header img
-- `css/style.css` - `.home-logo` style, `.home-wordmark` removed
+- `apply.html` - header and footer img
+- `css/style.css` - `.home-logo`/`.footer-logo` styles, text wordmark styles removed
 
 ---
 
