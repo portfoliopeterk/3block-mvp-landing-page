@@ -13,7 +13,8 @@ folder to Netlify/Vercel/GitHub Pages or any static host.
 | --- | --- |
 | `index.html` | Landing page (Tiny Dinner-inspired: gradient, logo, about, one CTA) |
 | `logo.svg` | "3 BLOCK" wordmark (white, single line), used as the landing heading (`logo.avif` is the older stacked version, kept but unused) |
-| `favicon.svg` | Green square favicon with a cream "3", linked from both pages |
+| `favicon.svg` | Green square favicon with a "3" glyph, linked from both pages |
+| `og-image.png` | 1200×630 social share image (logo on the green gradient), referenced by OG/Twitter meta tags on both pages |
 | `apply.html` | Grant description, requirements, and application form |
 | `css/style.css` | All styles; design tokens as CSS custom properties in `:root` |
 | `js/apply.js` | Form step engine, validation, submission |

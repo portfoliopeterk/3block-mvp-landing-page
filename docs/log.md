@@ -1,5 +1,21 @@
 # Change Log
 
+## 2026-07-07 - OG/share image + social meta tags
+
+**What Changed:**
+- Created `og-image.png` (1200×630): the logo.svg wordmark centered on the landing page's green gradient (rendered from an SVG source via rsvg-convert)
+- Added Open Graph + Twitter card meta tags to both pages (og:title/description/url/image with absolute Pages URLs, summary_large_image card)
+
+**Why:**
+- Links shared on social/messaging apps now show a branded preview card
+
+**Files Modified:**
+- `og-image.png` - new
+- `index.html` - OG/Twitter meta tags
+- `apply.html` - OG/Twitter meta tags
+
+---
+
 ## 2026-07-07 - Apply page header and footer use logo.svg
 
 **What Changed:**
