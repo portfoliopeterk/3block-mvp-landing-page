@@ -22,7 +22,7 @@ folder to Netlify/Vercel/GitHub Pages or any static host.
 
 ## Design system
 
-- **Colors:** green gradient background (`#43ac5c` → `#0b7a3a` → `#086030`),
+- **Colors:** green gradient background (`#509b10` → `#2c5e00`),
   cream text `#f7f3e7`, sun yellow `#ffd500` + sky blue `#2b5be2` accents,
   ink `#0a2416` for text on light chips/buttons.
 - **Type:** Fraunces (900, soft optical axis) for wordmark/headings; Catamaran
