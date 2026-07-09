@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3 Block — community groups with the neighbors around you</title>
-  <meta name="description" content="3 Block helps neighbors with shared interests form resilient community groups. Apply for a starter grant of up to $250 to launch a group in your Brooklyn neighborhood.">
+  <meta name="description" content="3 Block helps neighbors with shared interests form resilient community groups.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="3 Block — community groups with the neighbors around you">
   <meta property="og:description" content="Build a community with the people around you. We're launching in Brooklyn, with microgrants for aspiring organizers.">
@@ -21,28 +21,227 @@
 </head>
 <body class="landing">
 
-  <main class="landing-center">
+  <header class="landing-center">
     <div class="brand">
       <p class="tagline">Build a community with the people around you.</p>
       <h1 class="wordmark-logo">
         <img src="logo.svg" alt="3 Block" width="898" height="173">
       </h1>
     </div>
-
     <div class="landing-about">
-      <p>
-        3 Block helps neighbors with shared interests form resilient community groups. We give aspiring organizers the tools and resources to strengthen their neighborhoods through regular meetups and local participation.
-      </p>
-      <p>
-        We're starting in Brooklyn, with 10 starter grants for aspiring
-        organizers.
-      </p>
+      3Block is a community platform we're building to help people find and
+      form neighborhood groups. Our vision is simple: everyone should have a
+      group of people they actually know within a three-block radius.
     </div>
+  </header>
 
-    <a class="cta-link" href="apply.html">See more information and apply for a starter grant.</a>
+  <main class="apply-main">
+
+    <section class="section">
+      <h2 class="section-title">What's a 3Block group?</h2>
+      <p>
+        A small, hyperlocal group. Think of your block or neighborhood, not
+        your whole town or city. A few things make a group work:
+      </p>
+      <ul class="req-list">
+        <li>
+          <strong>It's built on something real.</strong> A shared interest,
+          identity, or activity: book club, running crew, game night, knitting
+          circle, language exchange. It's not a block party or tenant
+          association (great as those are). The shared thread is the glue, and
+          living nearby just makes showing up easy.
+        </li>
+        <li>
+          <strong>They meet regularly.</strong> Monthly, weekly, whatever fits,
+          but consistently. Showing up is what turns acquaintances into a real
+          group with real connections.
+        </li>
+        <li>
+          <strong>They give back now and then.</strong> These don't have to be
+          arduous. A book club may run a quarterly book drive; a running crew a
+          monthly park cleanup. We won't police this early on (just getting
+          together matters), but we've found a shared purpose gives a group
+          real staying power.
+        </li>
+      </ul>
+      <ul class="req-list">
+        <li>
+          <strong>Organizers won't be alone.</strong> We give you a
+          first-gathering playbook, tools to find members, and ideas for giving
+          back. And we'll connect you with other 3Block organizers to share
+          practices.
+        </li>
+        <li>
+          <strong>Organizers can get a little seed money.</strong> Microgrants
+          of $50 to $250 to help you launch, with more available for groups
+          that stay active and do good work in their communities.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <p>
+        We believe real neighborhood ties are good for our neighborhoods, our
+        towns, and our country. Strong local connections make people more
+        invested where they live, and give them a network to lean on when it
+        counts.
+      </p>
+      <p>
+        We're launching in Brooklyn and looking for a handful of pioneers to
+        help us build this the right way and prove that real community starts
+        local. If that's you, we'd love to have you. Answer a few questions
+        below. 
+      </p>
+      <p>
+        <strong>We're picking 10 organizers to kick this off, and will reach out 
+        by the end of July to schedule informal interviews.</strong>
+        Any questions, feel free to email
+        <a href="mailto:peter@portfolio.sc">peter@portfolio.sc</a>.
+      </p>
+    </section>
+
+    <section class="section apply-form" id="apply" aria-label="Grant application form">
+      <h2 class="section-title">Apply</h2>
+      <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+
+      <form id="grant-form" class="stacked-form" novalidate>
+
+        <div class="field">
+          <label class="field-label" for="f-name">Your name<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-name" name="name" type="text"
+                 autocomplete="name"
+                 data-required data-error-empty="We'd love to know who you are.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-email">Email<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-email" name="email" type="email"
+                 autocomplete="email"
+                 data-required data-type="email"
+                 data-error-empty="We need an email to reach you."
+                 data-error-invalid="Hmm, that email doesn't look right.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-neighborhood">What neighborhood are you in?<span class="req" aria-hidden="true">*</span></label>
+          <p class="field-help">Rough cross streets are great too.</p>
+          <input class="field-input" id="f-neighborhood" name="neighborhood" type="text"
+                 data-required data-error-empty="Tell us where your blocks are.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-group">What kind of group do you run or want to start?<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-group" name="group" type="text"
+                 data-required data-error-empty="This is the part we're most excited to read.">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field field-choice" data-choice="status"
+                  data-required data-error-empty="Pick whichever fits.">
+          <legend class="field-label">Are you already running it, or looking to start one?<span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row">
+            <label class="choice">
+              <input type="radio" name="status" value="Already running it">
+              <span>Already running it</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="status" value="Want to start one">
+              <span>Want to start one</span>
+            </label>
+          </div>
+          <p class="field-error" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="field field-choice" data-choice="coorganizer"
+                  data-required data-error-empty="Pick one — 'Not yet' is a fine answer.">
+          <legend class="field-label">Do you have a friend or colleague you could bring in as a co-organizer?<span class="req" aria-hidden="true">*</span></legend>
+          <p class="field-help">Not required, but it often helps a group succeed faster.</p>
+          <div class="choice-row">
+            <label class="choice">
+              <input type="radio" name="coorganizer" value="Yes">
+              <span>Yes</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="coorganizer" value="Not yet">
+              <span>Not yet</span>
+            </label>
+          </div>
+          <p class="field-error" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="field">
+          <label class="field-label" for="f-cadence">How often would you plan to meet?<span class="req" aria-hidden="true">*</span></label>
+          <input class="field-input" id="f-cadence" name="cadence" type="text"
+                 data-required data-error-empty="A rough cadence is fine — weekly, monthly…">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-service">Any ideas for community service activities?</label>
+          <p class="field-help">We can help you with this later if not.</p>
+          <textarea class="field-input field-textarea" id="f-service" name="service" rows="3"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-first-gathering">When could you picture holding a first gathering?<span class="req" aria-hidden="true">*</span></label>
+          <p class="field-help">A rough sense is fine.</p>
+          <input class="field-input" id="f-first-gathering" name="first_gathering" type="text"
+                 data-required data-error-empty="A rough sense is all we need — next month, this fall…">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-microgrant">Are you interested in a $50&ndash;250 microgrant?</label>
+          <p class="field-help">If so, how much, and what would you spend it on?</p>
+          <textarea class="field-input field-textarea" id="f-microgrant" name="microgrant" rows="3"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-notes">Anything else you'd like to share?</label>
+          <p class="field-help">If you have a group, let us know how big it is, how it's going, and what challenges you're running into.</p>
+          <textarea class="field-input field-textarea" id="f-notes" name="notes" rows="3"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" data-action="submit">Send application</button>
+          <p class="form-error" id="form-error" aria-live="polite"></p>
+        </div>
+
+      </form>
+
+      <div class="form-result" id="form-success" hidden>
+        <h3 class="result-title">We got it.</h3>
+        <p>
+          We review applications on a rolling basis and will be in touch.
+          In the meantime — start thinking about your first gathering.
+        </p>
+      </div>
+
+      <div class="form-result" id="form-failure" hidden>
+        <h3 class="result-title">That didn't go through.</h3>
+        <p>
+          Something on our end hiccuped. Please try again in a minute — or
+          email your answers to
+          <a href="mailto:peter@3block.org">peter@3block.org</a> and we'll
+          take it from there.
+        </p>
+        <button type="button" class="btn-primary" id="retry-btn">Try again</button>
+      </div>
+    </section>
+
   </main>
 
-  <a class="corner-contact" href="mailto:peter@portfolio.sc">peter@portfolio.sc</a>
+  <footer class="apply-footer">
+    <img class="footer-logo" src="logo.svg" alt="3 Block" width="898" height="173">
+    <a href="mailto:peter@3block.org">peter@3block.org</a>
+  </footer>
 
+  <script src="js/apply.js"></script>
 </body>
 </html>

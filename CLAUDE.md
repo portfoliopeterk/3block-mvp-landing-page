@@ -34,6 +34,31 @@ the user to look at rather than asking which browser to use.
 
 ---
 
+## Apply form ↔ Apps Script sync
+
+**CRITICAL:** The apply form and the Google Sheets backend are tightly coupled.
+`js/apply.js` collects form fields by `name` and POSTs them; `apps-script/Code.gs`
+maps those same field names into sheet columns via its `HEADERS` list and
+`appendRow` call.
+
+Whenever you change the apply form (`apply.html` / `js/apply.js`) — add, remove,
+rename, or reorder any field — you MUST:
+
+1. **Update `apps-script/Code.gs` to match** — adjust `HEADERS` and the
+   `appendRow(...)` block so every form field still lands in the right column,
+   in the right order.
+2. **Flag it prominently** in your response to the user, calling out that
+   `Code.gs` changed and must be **redeployed** (Apps Script →
+   Deploy → Manage deployments → Edit → New version) for the change to take
+   effect. Code edits alone do nothing until redeployed.
+3. Note whether the existing "Applications" sheet tab needs to be renamed or
+   deleted so the updated headers get regenerated.
+
+Never change form fields without doing the corresponding `Code.gs` update in the
+same change.
+
+---
+
 ## Logging Requirements
 
 **CRITICAL:** For every code change or feature addition:

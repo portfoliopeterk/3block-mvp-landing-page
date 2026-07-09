@@ -5,7 +5,7 @@
 
   // Paste your deployed Google Apps Script web app URL here.
   // Setup instructions: docs/readme.md
-  var SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+  var SCRIPT_URL = "https://script.google.com/a/macros/portfolio.sc/s/AKfycbxkclyFODaclGvQJkDF4OloZd7uS0PqyA-Uz0mo0QHscihpGvGoKhfaTEBBif46QXaxRQ/exec";
 
   var form = document.getElementById("grant-form");
   if (!form) return;
