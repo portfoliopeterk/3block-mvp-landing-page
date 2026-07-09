@@ -67,6 +67,23 @@ All questions shown at once (standard stacked form), vanilla JS (`js/apply.js`):
 To change what's stored, edit `HEADERS` and the `appendRow` call in `Code.gs`,
 then **Deploy → Manage deployments → Edit → New version**.
 
+### CORS / submission notes
+
+- Apps Script's `ContentService` responses carry **no** `Access-Control-Allow-Origin`
+  header and there's no way to add one, so `js/apply.js` posts in
+  **`mode: "no-cors"`**. The request (a simple `application/x-www-form-urlencoded`
+  POST, no preflight) goes through and the row is written, but the response is
+  **opaque** — the JS can't read status or body. Success is therefore *inferred*
+  from the request resolving; only a true network error shows the failure screen.
+  Consequence: **the success screen no longer proves a row was written** — verify
+  by checking the "Applications" tab.
+- **"Who has access" must be `Anyone`, not "Anyone within <domain>".** A Workspace
+  deployment URL looks like `.../a/macros/<domain>/s/.../exec`. If access is
+  domain-restricted, anonymous public visitors get redirected to a Google login;
+  with `no-cors` that still resolves (fake success) but **no row is written**. If
+  the admin blocks public web-app publishing entirely, a serverless proxy is
+  needed instead.
+
 **Note (2026-07-07):** the form questions changed (phone and numeric amount
 removed; neighborhood, kind of group, running/starting, co-organizer, cadence,
 service ideas, first gathering, microgrant, notes added). If you deployed the

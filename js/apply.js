@@ -5,7 +5,7 @@
 
   // Paste your deployed Google Apps Script web app URL here.
   // Setup instructions: docs/readme.md
-  var SCRIPT_URL = "https://script.google.com/a/macros/portfolio.sc/s/AKfycbxkclyFODaclGvQJkDF4OloZd7uS0PqyA-Uz0mo0QHscihpGvGoKhfaTEBBif46QXaxRQ/exec";
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkclyFODaclGvQJkDF4OloZd7uS0PqyA-Uz0mo0QHscihpGvGoKhfaTEBBif46QXaxRQ/exec";
 
   var form = document.getElementById("grant-form");
   if (!form) return;
@@ -129,9 +129,18 @@
       return;
     }
 
-    fetch(SCRIPT_URL, { method: "POST", body: collectData() })
-      .then(function (res) {
-        done(res.ok);
+    // Apps Script's ContentService responses carry no CORS headers, so we
+    // send in "no-cors" mode: the browser posts the (simple, form-urlencoded)
+    // request and the row is written, but the response is opaque and can't be
+    // read. We therefore treat a resolved request as success and only a real
+    // network error (rejection) as failure.
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: collectData()
+    })
+      .then(function () {
+        done(true);
       })
       .catch(function () {
         done(false);

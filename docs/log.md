@@ -1,5 +1,25 @@
 # Change Log
 
+## 2026-07-09 - Fixed CORS error on apply form submission
+
+**What Changed:**
+- Changed the `fetch` in `js/apply.js` to use `mode: "no-cors"` and treat a
+  resolved request as success (previously read `res.ok`, which is unreadable
+  cross-origin)
+
+**Why:**
+- Google Apps Script's ContentService responses include no
+  `Access-Control-Allow-Origin` header, so a normal cross-origin fetch from
+  `apply.3block.org` threw a CORS error and the form fell into its failure
+  state even though the row was written. `no-cors` lets the (simple,
+  form-urlencoded) request through; the response is opaque, so success is now
+  inferred from the request resolving.
+
+**Files Modified:**
+- `js/apply.js`
+
+---
+
 ## 2026-07-07 - Gradient colors updated
 
 **What Changed:**
