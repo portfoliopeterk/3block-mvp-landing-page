@@ -3,6 +3,51 @@
 (function () {
   "use strict";
 
+  /* ---------------- hero "Read more" toggle ---------------- */
+
+  var moreBlock = document.getElementById("hero-more");
+  var moreToggle = document.getElementById("hero-more-toggle");
+  if (moreBlock && moreToggle) {
+    moreToggle.addEventListener("click", function () {
+      var expanded = moreBlock.hidden;
+      moreBlock.hidden = !expanded;
+      moreToggle.setAttribute("aria-expanded", String(expanded));
+      moreToggle.textContent = expanded ? "Show less" : "Read more";
+    });
+  }
+
+  /* ---------------- Apply / About tabs ---------------- */
+
+  var tabNav = document.querySelector(".tab-nav");
+  if (tabNav) {
+    var tabLinks = tabNav.querySelectorAll(".tab-link");
+
+    var activateTab = function (name) {
+      tabLinks.forEach(function (link) {
+        var active = link.dataset.tab === name;
+        link.classList.toggle("is-active", active);
+        if (active) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+        var panel = document.getElementById(link.dataset.tab);
+        if (panel) panel.hidden = !active;
+      });
+    };
+
+    tabNav.addEventListener("click", function (e) {
+      var link = e.target.closest(".tab-link");
+      if (!link) return;
+      e.preventDefault();
+      activateTab(link.dataset.tab);
+      history.replaceState(null, "", link.getAttribute("href"));
+    });
+
+    // deep links: #apply opens the Apply tab, everything else defaults to About
+    activateTab(location.hash === "#apply" ? "apply" : "about");
+  }
+
   // Paste your deployed Google Apps Script web app URL here.
   // Setup instructions: docs/readme.md
   var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkclyFODaclGvQJkDF4OloZd7uS0PqyA-Uz0mo0QHscihpGvGoKhfaTEBBif46QXaxRQ/exec";

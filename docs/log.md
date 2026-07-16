@@ -1,5 +1,117 @@
 # Change Log
 
+## 2026-07-16 - Matched intro paragraph width to the logo and left-aligned it
+
+**What Changed:**
+- `.landing-about` now uses the same width formula as the wordmark logo
+  (`clamp(18rem, 70vw, 36rem)`, was `max-width: 32rem`) so their edges line
+  up at every viewport size, and its text is left-aligned instead of
+  inheriting the header's centering
+
+**Why:**
+- The intro paragraph was narrower than the logo above it and center-aligned,
+  which looked uneven in the compacted header
+
+**Files Modified:**
+- `css/style.css`
+
+---
+
+## 2026-07-16 - Made About the first and default tab
+
+**What Changed:**
+- Reordered the `index.html` tab nav so About comes before Apply
+- About panel now visible on load; Apply panel starts `hidden`
+- Default-tab logic in `js/apply.js` flipped: `#apply` deep-links to the
+  Apply tab, everything else opens About
+
+**Why:**
+- Visitors should read what 3Block is before hitting the application form
+
+**Files Modified:**
+- `index.html`
+- `js/apply.js`
+
+---
+
+## 2026-07-16 - Inlined the "Read more" toggle into the intro paragraph
+
+**What Changed:**
+- On `index.html`, moved the "Read more" toggle button from its own
+  paragraph below the expander into the end of the "3Block is a community
+  platform…" intro paragraph, so it flows with the text
+- `.read-more-toggle` CSS: removed the `margin-top` and made font family /
+  size inherit from the surrounding paragraph; removed the now-unneeded
+  `margin-top` on `.read-more`
+
+**Why:**
+- Makes the landing header more compact — the toggle no longer takes its own
+  line
+
+**Files Modified:**
+- `index.html`
+- `css/style.css`
+
+---
+
+## 2026-07-16 - Split index.html main column into Apply / About tabs
+
+**What Changed:**
+- Added a `.tab-nav` with two links (Apply, About) at the top of
+  `.apply-main` on `index.html`, sitting just above the first section ruler
+  (below the landing header)
+- The "What's a 3Block group?" section became the About panel (`id="about"`,
+  hidden by default); the existing form section (`id="apply"`) is the Apply
+  panel and shows by default
+- Tab links have inactive (60% cream), hover (full cream), and active
+  (full cream + sun underline) states in `css/style.css`
+- Toggle logic in `js/apply.js`: clicking a tab shows its panel, marks the
+  link `aria-current`, and syncs the URL hash via `history.replaceState`;
+  loading the page with `#about` opens the About tab, anything else defaults
+  to Apply
+
+**Why:**
+- Puts the application form front and center while keeping the explainer
+  content one click away, and makes both states deep-linkable
+
+**Files Modified:**
+- `index.html`
+- `css/style.css`
+- `js/apply.js`
+
+---
+
+## 2026-07-16 - Moved index.html intro paragraphs into a "Read more" expander
+
+**What Changed:**
+- On `index.html`, moved the three paragraphs ("We believe real neighborhood
+  ties…", "We're launching in Brooklyn…", "We're picking 10 organizers…")
+  from their own standalone section into a collapsible `.read-more` block
+  inside `.landing-about`, directly under the "3Block is a community
+  platform…" blurb; the old section was removed
+- Added a "Read more" toggle button (styled as an underlined link) that
+  expands the block and switches to "Show less" to collapse it, with
+  `aria-expanded` / `aria-controls` wiring
+- Toggle logic added at the top of `js/apply.js` (loaded by both pages);
+  `.read-more` and `.read-more-toggle` styles added to `css/style.css`
+- Also synced the textarea single-line change into `index.html`
+  (`rows="3"` → `rows="1"` on service/microgrant/notes) — index.html carries
+  a full copy of the application form
+- This was first applied to `apply.html` by mistake and then reverted there;
+  apply.html keeps its original hero + standalone paragraph section
+
+**Why:**
+- Shortens the landing page above the fold so visitors reach "What's a
+  3Block group?" and the application form sooner, while keeping the mission
+  copy one click away
+
+**Files Modified:**
+- `index.html`
+- `css/style.css`
+- `js/apply.js`
+
+---
+
 ## 2026-07-16 - Form textareas start as a single line and auto-grow
 
 **What Changed:**

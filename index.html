@@ -29,15 +29,22 @@
       </h1>
     </div>
     <div class="landing-about">
-      3Block is a community platform we're building to help people find and
-      form neighborhood groups. Our vision is simple: everyone should have a
-      group of people they actually know within a three-block radius.
+      <p>
+        3Block is a community platform we're building to help people find and
+        form neighborhood groups. Our vision is simple: everyone should have a
+        group of people they actually know within a three-block radius.
+      </p>
     </div>
   </header>
 
   <main class="apply-main">
 
-    <section class="section">
+    <nav class="tab-nav" aria-label="Page sections">
+      <a class="tab-link" href="#about" data-tab="about">About</a>
+      <a class="tab-link" href="#apply" data-tab="apply">Apply</a>
+    </nav>
+
+    <section class="section" id="about">
       <h2 class="section-title">What's a 3Block group?</h2>
       <p>
         A small, hyperlocal group. Think of your block or neighborhood, not
@@ -77,30 +84,29 @@
           that stay active and do good work in their communities.
         </li>
       </ul>
+            <div class="read-more" id="hero-more">
+        <p>
+          We believe real neighborhood ties are good for our neighborhoods, our
+          towns, and our country. Strong local connections make people more
+          invested where they live, and give them a network to lean on when it
+          counts.
+        </p>
+        <p>
+          We're launching in Brooklyn and looking for a handful of pioneers to
+          help us build this the right way and prove that real community starts
+          local. If that's you, we'd love to have you. Answer a few questions
+          below.
+        </p>
+        <p>
+          <strong>We're picking 10 organizers to kick this off, and will reach out
+          by the end of July to schedule informal interviews.</strong>
+          Any questions, feel free to email
+          <a href="mailto:peter@3block.org">peter@3block.org</a>.
+        </p>
+      </div>
     </section>
 
-    <section class="section">
-      <p>
-        We believe real neighborhood ties are good for our neighborhoods, our
-        towns, and our country. Strong local connections make people more
-        invested where they live, and give them a network to lean on when it
-        counts.
-      </p>
-      <p>
-        We're launching in Brooklyn and looking for a handful of pioneers to
-        help us build this the right way and prove that real community starts
-        local. If that's you, we'd love to have you. Answer a few questions
-        below. 
-      </p>
-      <p>
-        <strong>We're picking 10 organizers to kick this off, and will reach out 
-        by the end of July to schedule informal interviews.</strong>
-        Any questions, feel free to email
-        <a href="mailto:peter@3block.org">peter@3block.org</a>.
-      </p>
-    </section>
-
-    <section class="section apply-form" id="apply" aria-label="Grant application form">
+    <section class="section apply-form" id="apply" aria-label="Grant application form" hidden>
       <h2 class="section-title">Apply</h2>
       <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
 
@@ -182,7 +188,7 @@
         <div class="field">
           <label class="field-label" for="f-service">Any ideas for community service activities?</label>
           <p class="field-help">We can help you with this later if not.</p>
-          <textarea class="field-input field-textarea" id="f-service" name="service" rows="3"></textarea>
+          <textarea class="field-input field-textarea" id="f-service" name="service" rows="1"></textarea>
           <p class="field-error" aria-live="polite"></p>
         </div>
 
@@ -197,14 +203,14 @@
         <div class="field">
           <label class="field-label" for="f-microgrant">Are you interested in a $50&ndash;250 microgrant?</label>
           <p class="field-help">If so, how much, and what would you spend it on?</p>
-          <textarea class="field-input field-textarea" id="f-microgrant" name="microgrant" rows="3"></textarea>
+          <textarea class="field-input field-textarea" id="f-microgrant" name="microgrant" rows="1"></textarea>
           <p class="field-error" aria-live="polite"></p>
         </div>
 
         <div class="field">
           <label class="field-label" for="f-notes">Anything else you'd like to share?</label>
           <p class="field-help">If you have a group, let us know how big it is, how it's going, and what challenges you're running into.</p>
-          <textarea class="field-input field-textarea" id="f-notes" name="notes" rows="3"></textarea>
+          <textarea class="field-input field-textarea" id="f-notes" name="notes" rows="1"></textarea>
           <p class="field-error" aria-live="polite"></p>
         </div>
 

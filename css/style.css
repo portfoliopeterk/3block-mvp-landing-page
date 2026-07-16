@@ -112,10 +112,13 @@ a {
 }
 
 .landing-about {
-  max-width: 32rem;
+  /* match the wordmark logo's width so the two edges line up */
+  width: clamp(18rem, 70vw, 36rem);
+  max-width: 100%;
   display: grid;
   gap: 0.75rem;
   font-size: 1.02rem;
+  text-align: left;
 }
 
 .tagline {
@@ -198,11 +201,52 @@ a {
   padding: 2.5rem 0 3rem;
 }
 
+/* Apply / About tabs — sit just above the first section ruler */
+
+.tab-nav {
+  display: flex;
+  gap: 1.75rem;
+  padding: 1rem 0 1.5rem;
+}
+
+.tab-link {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: rgba(247, 243, 231, 0.6);
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.tab-link:hover {
+  color: var(--cream);
+}
+
+.tab-link.is-active {
+  color: var(--cream);
+  border-bottom-color: var(--sun);
+}
+
 .hero-lede {
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   line-height: 1.45;
+}
+
+.read-more p {
+  margin-top: 1rem;
+}
+
+.read-more {
+  margin-top: 2rem;
+}
+
+.read-more a {
+  font-weight: 700;
+  text-decoration-color: var(--sun);
+  text-underline-offset: 0.25em;
 }
 
 .section {
