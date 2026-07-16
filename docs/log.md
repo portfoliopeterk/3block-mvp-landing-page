@@ -1,5 +1,47 @@
 # Change Log
 
+## 2026-07-16 - Form textareas start as a single line and auto-grow
+
+**What Changed:**
+- Changed the three form textareas (service, microgrant, notes) from
+  `rows="3"` to `rows="1"` in `apply.html`
+- `.field-textarea` CSS: removed the `5.5rem` min-height and the manual
+  vertical resize handle; hidden overflow so the height is driven by content
+- Added an `autogrow()` helper in `js/apply.js` that sets the textarea height
+  to its scroll height (plus border), run once on load and on every input
+- Hardened `autogrow()`: it forces `rows = 1` itself (so cached rows="3"
+  markup can't set a taller floor) and only writes an inline height once the
+  content actually needs a second line — an empty field has no inline height
+
+**Why:**
+- Multiline fields looked heavy as fixed three-row boxes; they now match the
+  single-line inputs visually and expand smoothly as the user types
+
+**Files Modified:**
+- `apply.html`
+- `css/style.css`
+- `js/apply.js`
+
+---
+
+## 2026-07-16 - Unified apply page main column to a single 640px width
+
+**What Changed:**
+- Set `.apply-main` width to `min(640px, 100% - 3rem)` (was `min(42rem, 100% - 3rem)`)
+- Removed the inner `max-width` caps that made content blocks narrower than the
+  column: `.hero-lede` (38rem), `.section p` (36rem), `.req-list` (36rem),
+  `.stacked-form` (36rem), `.form-result` (36rem) — all now fill the column
+
+**Why:**
+- The main column and its content blocks used several different widths
+  (672px / 608px / 576px), so section edges didn't line up. Everything now
+  aligns to one 640px column.
+
+**Files Modified:**
+- `css/style.css`
+
+---
+
 ## 2026-07-09 - Fixed CORS error on apply form submission
 
 **What Changed:**

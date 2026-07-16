@@ -147,6 +147,23 @@
       });
   }
 
+  /* ---------------- auto-growing textareas ---------------- */
+
+  // Textareas start at one line and grow to fit their content. rows is
+  // forced to 1 here so a stale cached rows="3" markup can't set the floor.
+  // An inline height is only written once content needs a second line;
+  // scrollHeight excludes borders, but the elements are border-box sized,
+  // so the border height is added back (offsetHeight - clientHeight).
+  function autogrow(el) {
+    el.rows = 1;
+    el.style.height = "";
+    if (el.scrollHeight > el.clientHeight) {
+      el.style.height = el.scrollHeight + (el.offsetHeight - el.clientHeight) + "px";
+    }
+  }
+
+  form.querySelectorAll(".field-textarea").forEach(autogrow);
+
   /* ---------------- events ---------------- */
 
   form.addEventListener("submit", function (e) {
@@ -156,6 +173,7 @@
 
   // clear a field's error as soon as it's edited
   form.addEventListener("input", function (e) {
+    if (e.target.classList.contains("field-textarea")) autogrow(e.target);
     var field = e.target.closest(".field");
     if (field) setError(field, "");
     formError.textContent = "";

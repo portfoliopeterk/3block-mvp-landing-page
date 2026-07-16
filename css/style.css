@@ -189,7 +189,7 @@ a {
 
 .apply-main {
   flex: 1;
-  width: min(42rem, 100% - 3rem);
+  width: min(640px, 100% - 3rem);
   margin: 0 auto;
   padding: 3rem 0 5rem;
 }
@@ -203,7 +203,6 @@ a {
   font-weight: 300;
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   line-height: 1.45;
-  max-width: 38rem;
 }
 
 .section {
@@ -220,7 +219,6 @@ a {
 }
 
 .section p {
-  max-width: 36rem;
   margin-bottom: 1rem;
 }
 
@@ -232,7 +230,6 @@ a {
   list-style: none;
   display: grid;
   gap: 1.1rem;
-  max-width: 36rem;
   padding: 0;
 }
 
@@ -310,7 +307,6 @@ a {
 .stacked-form {
   display: grid;
   gap: 2rem;
-  max-width: 36rem;
   margin-top: 1.5rem;
 }
 
@@ -364,8 +360,8 @@ legend.field-label {
 }
 
 .field-textarea {
-  resize: vertical;
-  min-height: 5.5rem;
+  resize: none;
+  overflow: hidden;
   line-height: 1.5;
   font-size: 1.05rem;
 }
@@ -443,7 +439,6 @@ legend.field-label {
 }
 
 .form-result {
-  max-width: 36rem;
   padding: 1.5rem 0;
 }
 
