@@ -44,6 +44,16 @@
       history.replaceState(null, "", link.getAttribute("href"));
     });
 
+    document.addEventListener("click", function (e) {
+      var jump = e.target.closest("[data-tab-jump]");
+      if (!jump) return;
+      e.preventDefault();
+      var name = jump.dataset.tabJump;
+      activateTab(name);
+      history.replaceState(null, "", "#" + name);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
     // deep links: #apply opens the Apply tab, everything else defaults to About
     activateTab(location.hash === "#apply" ? "apply" : "about");
   }

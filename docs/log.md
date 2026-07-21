@@ -1,5 +1,81 @@
 # Change Log
 
+## 2026-07-21 - Evened out header vertical rhythm to 2rem gaps
+
+**What Changed:**
+- `.landing-center` gap dropped from `2.5rem` to `2rem`
+- `.brand` gap raised from `1.5rem` to `2rem`
+- `.wordmark-logo` margin zeroed out (was `1.75rem 0`)
+
+**Why:**
+- Previously the logo margin was adding to both the tagline-to-logo and
+  logo-to-paragraph gaps, making them (3.25rem / 4.25rem) noticeably
+  larger than the ~2rem gap between the paragraph and the tabs. Now all
+  three inter-element gaps in the header sit at 2rem for a consistent
+  rhythm
+
+**Files Modified:**
+- `css/style.css`
+
+---
+
+## 2026-07-21 - Tightened space between the landing header and the tabs
+
+**What Changed:**
+- `.landing-center` bottom padding trimmed from `4rem` to `1.5rem`
+- `.apply-main` top padding reduced from `3rem` to `0.5rem`
+- `.tab-nav` top padding removed (was `1rem`)
+
+**Why:**
+- User wanted less vertical space above the About/Apply tabs
+
+**Files Modified:**
+- `css/style.css`
+
+---
+
+## 2026-07-21 - Shrunk landing tagline so it fits on one line
+
+**What Changed:**
+- Dropped `.tagline` font-size from `clamp(1.25rem, 3vw, 1.75rem)` to
+  `clamp(1rem, 2.2vw, 1.35rem)` and removed the `max-width: 26ch` cap so
+  the "Build a community with the people around you." headline sits on a
+  single line at typical viewport widths
+
+**Why:**
+- The 26ch max-width was forcing the tagline to wrap; user wanted it as a
+  single, smaller line above the logo
+
+**Files Modified:**
+- `css/style.css` - `.tagline` size and width tweak
+
+---
+
+## 2026-07-21 - Added "Apply now" CTA button at the end of the About tab
+
+**What Changed:**
+- Added a button-styled `Apply now` link at the bottom of the About tab's
+  explanatory text (inside `#hero-more`), directly after the "picking 10
+  organizers" paragraph
+- Wired up a document-level click handler for any `[data-tab-jump]` element
+  so the CTA switches the visible tab to Apply, updates the URL hash, and
+  scrolls to the top — reusing the existing `activateTab` logic
+- Extended `.btn-primary` styling to work as an anchor (`a.btn-primary` /
+  `.btn-link`: `display: inline-block`, no underline, keeps ink color on
+  hover) and added a `.section-cta` spacer
+
+**Why:**
+- Users reaching the end of the About copy had no clear affordance to move
+  on to the application form other than clicking the small "Apply" tab at
+  the top of the page
+
+**Files Modified:**
+- `index.html` - Added the CTA anchor inside the read-more block
+- `js/apply.js` - Added the `[data-tab-jump]` document click handler
+- `css/style.css` - Anchor variant of `.btn-primary` + `.section-cta` spacing
+
+---
+
 ## 2026-07-16 - Matched intro paragraph width to the logo and left-aligned it
 
 **What Changed:**
