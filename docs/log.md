@@ -1,5 +1,22 @@
 # Change Log
 
+## 2026-07-21 - Bumped header rhythm from 2rem to 2.5rem gaps
+
+**What Changed:**
+- `.landing-center` gap: `2rem` → `2.5rem`
+- `.brand` gap: `2rem` → `2.5rem`
+- `.landing-center` padding-bottom: `1.5rem` → `2rem` (so
+  paragraph→tab total is 2.5rem: 2rem + 0.5rem `.apply-main` top)
+
+**Why:**
+- 2rem gaps felt too tight compared to the (viewport-centered) space
+  above the tagline
+
+**Files Modified:**
+- `css/style.css`
+
+---
+
 ## 2026-07-21 - Evened out header vertical rhythm to 2rem gaps
 
 **What Changed:**
