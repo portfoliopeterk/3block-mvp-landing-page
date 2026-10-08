@@ -1,5 +1,34 @@
 # Change Log
 
+## 2026-10-08 - Applied Alexis's copy edits to landing and About section
+
+**What Changed:**
+- Added a `.landing-about` intro under the logo: "Big Tech wants us hooked on
+  the scroll..." and "Free to use. No ads. No selling your data. ... $250
+  micro-grants..."
+- "What's a 3Block group?" intro cleaned up (fixed "shared a interest" and
+  the double period)
+- Bullets now: "Organizers can get a little seed money." ($250, plus "If you
+  already have a group going, you can still apply!"), "Groups give back now
+  and then." ("arduous" -> "a huge lift"), and new "You are not the product."
+- Removed the "Organizers won't be alone." bullet and the "neighborhood ties
+  are good for our country" paragraph
+- Interview timing: "by mid-August" -> "by the end of October"
+
+**Why:**
+- Copy edits from Alexis for the application page
+
+**Files Modified:**
+- `index.html`
+
+**Notes:**
+- Copy-only change. No form field `name` attributes touched, so
+  `apps-script/Code.gs` needs no update and no redeploy.
+- Not changed, pending decision: the microgrant form field still says
+  "$50–250", and the meta/og descriptions carry older wording.
+
+---
+
 ## 2026-07-21 - Bumped header rhythm from 2rem to 2.5rem gaps
 
 **What Changed:**
